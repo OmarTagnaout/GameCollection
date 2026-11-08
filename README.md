@@ -39,5 +39,5 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 - Francisco Rojo
 
 ## Enlaces
-- Aplicación desplegada: (URL de Render)
-- Vídeo demostrativo: (URL)
+- Aplicación desplegada: (Por añadir la URL de Render)
+- Vídeo demostrativo: (Por añadir)
