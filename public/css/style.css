@@ -1,0 +1,97 @@
+:root {
+    --bg: #0f1220;
+    --surface: #1a1f36;
+    --text: #f1f3fa;
+    --muted: #b8bed6;
+    --accent: #7c5cff;
+    --accent-hover: #9a82ff;
+    --focus: #ffd166;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main { flex: 1; width: min(1000px, 92%); margin: 0 auto; padding: 2rem 0; }
+  
+  a { color: var(--accent-hover); }
+  
+  /* Accesibilidad: foco visible y enlace de salto */
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  .skip-link {
+    position: absolute; left: -999px; top: 0;
+    background: var(--focus); color: #000; padding: .5rem 1rem; z-index: 10;
+  }
+  .skip-link:focus { left: 0; }
+  
+  /* Cabecera */
+  .site-header {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+    padding: 1rem 4%; background: var(--surface);
+  }
+  .logo { font-size: 1.4rem; font-weight: 700; color: var(--text); text-decoration: none; }
+  .site-header ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+  .site-header nav a { color: var(--text); text-decoration: none; padding: .4rem .2rem; }
+  .site-header nav a:hover { color: var(--accent-hover); }
+  .site-header nav a[aria-current="page"] { border-bottom: 3px solid var(--accent); }
+  
+  /* Hero */
+  .hero { text-align: center; padding: 3rem 1rem; }
+  .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem; }
+  .hero p { max-width: 60ch; margin: 0 auto 1.5rem; color: var(--muted); }
+  
+  /* Botones */
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff;
+    border: none; border-radius: 8px; padding: .8rem 1.6rem;
+    font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none;
+  }
+  .btn:hover { background: var(--accent-hover); }
+  
+  /* Pasos */
+  .steps { padding-left: 1.2rem; color: var(--muted); }
+  .steps strong { color: var(--text); }
+  
+  /* Tarjetas */
+  .cards {
+    list-style: none; padding: 0;
+    display: grid; gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+  .card { background: var(--surface); border-radius: 12px; padding: 1rem; }
+  .card-img {
+    height: 120px; display: grid; place-items: center; font-size: 3rem;
+    background: linear-gradient(135deg, #2b2f55, #4b3a9c); border-radius: 8px; margin-bottom: .8rem;
+  }
+  .card h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .9rem; }
+  .note { color: var(--muted); font-size: .9rem; }
+  
+  /* Formularios */
+  .form-box {
+    max-width: 480px; margin: 2rem auto; background: var(--surface);
+    padding: 2rem; border-radius: 12px;
+  }
+  .field { display: flex; flex-direction: column; margin-bottom: 1.2rem; }
+  label { margin-bottom: .4rem; font-weight: 600; }
+  input, textarea {
+    padding: .75rem; border-radius: 8px; border: 2px solid #3a4070;
+    background: #0f1220; color: var(--text); font: inherit;
+  }
+  input:focus, textarea:focus { border-color: var(--accent); }
+  .message { min-height: 1.5rem; font-weight: 600; }
+  .message.ok { color: #7ee787; }
+  .message.error { color: #ff8b8b; }
+  
+  /* Pie */
+  .site-footer { text-align: center; padding: 1.2rem; background: var(--surface); color: var(--muted); }

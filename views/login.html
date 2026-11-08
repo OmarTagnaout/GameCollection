@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | GameCollection</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="logo" href="/">🎮 GameCollection</a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/login" aria-current="page">Iniciar sesión</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="form-box">
+      <h1>Iniciar sesión</h1>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" id="username" name="username" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+      <p id="form-message" class="message" role="status" aria-live="polite"></p>
+      <p>¿Dudas? <a href="/contacto">Contáctanos</a> · <a href="/">Volver al inicio</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 GameCollection · Proyecto académico CESUR</p>
+  </footer>
+</body>
+</html>
