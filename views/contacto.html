@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | GameCollection</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/main.js" defer></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="site-header">
-    <a class="logo" href="/">🎮 GameCollection</a>
-    <nav aria-label="Navegación principal">
+  <header class="header">
+    <nav class="header-navbar" aria-label="Navegación principal">
+      <a class="header-logo" href="/">🎮 GameCollection</a>
       <ul>
         <li><a href="/">Inicio</a></li>
         <li><a href="/login">Iniciar sesión</a></li>
@@ -22,29 +21,46 @@
   </header>
 
   <main id="contenido">
+    <!-- Formulario de contacto (simulado con app.js) -->
     <section class="form-box">
       <h1>Contacto</h1>
-      <form id="contact-form" novalidate>
-        <div class="field">
+      <form class="contact-form" novalidate>
+        <div class="form-field">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" autocomplete="name" required>
         </div>
-        <div class="field">
+        <div class="form-field">
           <label for="email">Correo electrónico</label>
           <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
-        <div class="field">
+        <div class="form-field">
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
         </div>
         <button type="submit" class="btn">Enviar mensaje</button>
       </form>
-      <p id="form-message" class="message" role="status" aria-live="polite"></p>
+      <p class="form-message" role="status" aria-live="polite"></p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2026 GameCollection · Proyecto académico CESUR</p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-inner-col">
+        <h4>GameCollection</h4>
+        <p>Gestiona tu colección de videojuegos, sea cual sea su formato.</p>
+      </div>
+      <div class="footer-inner-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/login">Iniciar sesión</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 GameCollection · Proyecto académico CESUR</p>
   </footer>
+
+  <script src="/javascripts/app.js"></script>
 </body>
 </html>
