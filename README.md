@@ -10,7 +10,7 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 
 ## Instalación y ejecución
 1. Clona el repositorio:
-   git clone https://github.com/TU_USUARIO/gamecollection.git
+   git clone https://github.com/OmarTagnaout/GameCollection.git
 2. Instala las dependencias:
    npm install
 3. Arranca el servidor:
@@ -19,8 +19,8 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 
 ## Páginas
 - `/` Inicio
-- `/login` Inicio de sesión (simulado)
-- `/contacto` Contacto (simulado)
+- `/login` Inicio de sesión 
+- `/contacto` Contacto 
 
 ## Estructura del proyecto
 - `server.js`: servidor y rutas
