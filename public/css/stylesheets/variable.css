@@ -1,0 +1,13 @@
+/* CSS Variables: colores globales del proyecto.
+   En caso de que quiera cambiar los colores, solo hay que tocar este archivo. */
+   :root{
+    --background-color-main: #0f1220;    /* fondo de la página */
+    --background-color-dark: #1a1f36;    /* cabecera, pie y tarjetas */
+    --background-color-light: #2b3160;   /* hover sobre fondos oscuros */
+    --background-color-accent: #9a82ff;  /* color de acento (enlaces, subrayados) */
+    --text-color-light: #f1f3fa;         /* texto principal */
+    --text-color-muted: #b8bed6;         /* texto secundario */
+    --button-color: #6a47f0;             /* botones (contraste suficiente con texto blanco) */
+    --button-color-hover: #5836d6;
+    --focus-color: #ffd166;              /* contorno del foco de teclado */
+  }

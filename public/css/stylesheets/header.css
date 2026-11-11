@@ -1,0 +1,46 @@
+/* CSS Header */
+header.header{
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+  
+    nav.header-navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;  /* en móvil el menú pasa a la línea siguiente */
+      padding: 0 1rem;
+  
+      /* Logo / nombre de la web */
+      a.header-logo{
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-color-light);
+        text-decoration: none;
+        padding: 1rem 0;
+      }
+  
+      /* Menú de navegación */
+      ul{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+  
+        a{
+          color: var(--text-color-light);
+          text-decoration: none;
+          display: block;
+          padding: 1rem;
+          transition: 0.3s;
+  
+          /* Subrayado al pasar el ratón */
+          &:hover{ border-bottom: solid 2px var(--background-color-accent); }
+          /* Página actual resaltada (atributo aria-current del HTML) */
+          &[aria-current="page"]{ border-bottom: solid 3px var(--background-color-accent); }
+        }
+      }
+    }
+  }
