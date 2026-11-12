@@ -40,4 +40,3 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 
 ## Enlaces
 - Aplicación desplegada: https://gamecollection-x2lk.onrender.com/
-- Vídeo demostrativo: (Por añadir)
