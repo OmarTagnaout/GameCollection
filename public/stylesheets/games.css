@@ -1,34 +1,102 @@
-/* CSS Games: listado ilustrativo de videojuegos recientes */
+/* CSS Games: catálogo de juegos (con icono provisional en lugar de portada) */
 section.games{
 
-    /* Rejilla adaptable: tantas columnas como quepan (mínimo 210px) */
-    ul.games-list{
-      list-style: none;
-      padding: 0;
-      display: grid;
-      gap: 1.2rem;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  
-      li.game-card{
-        background: var(--background-color-dark);
-        border-radius: 12px;
-        padding: 1rem;
-  
-        /* Zona de imagen (de momento con emoji) */
-        div.game-card-img{
-          height: 120px;
+  /* Rejilla adaptable: tantas tarjetas como quepan (mínimo 170px) */
+  ul.games-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 2rem 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+
+    li.game-card{
+
+      /* Zona de imagen: icono ahora, portada más adelante */
+      figure.game-cover{
+        position: relative;
+        margin: 0 0 .75rem;
+
+        img, div.game-cover-icon{
+          display: block;
+          width: 100%;
+          aspect-ratio: 2 / 3;
+          object-fit: cover;
+          background: var(--background-color-surface);
+          border: 1px solid var(--border-color);
+          transition: 0.2s;
+        }
+
+        /* Marcador provisional: icono centrado */
+        div.game-cover-icon{
           display: grid;
           place-items: center;
-          font-size: 3rem;
-          background: linear-gradient(135deg, #2b2f55, #4b3a9c);
-          border-radius: 8px;
-          margin-bottom: .8rem;
+          font-size: 3.5rem;
         }
-  
-        h3{ margin: 0 0 .3rem; font-size: 1.05rem; }
-        p{ margin: 0; color: var(--text-color-muted); font-size: .9rem; }
+
+        /* Etiqueta tipo videoclub: "REF. 001" */
+        figcaption.game-ref{
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 0;
+          padding: .15rem .5rem;
+          background: var(--background-color-dark);
+          color: var(--text-color-light);
+          font-family: var(--font-mono);
+          font-size: .7rem;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
+      }
+
+      /* Tres tonos planos y apagados para que no sean todas iguales */
+      &:nth-child(3n+1) div.game-cover-icon{ background: #1f2530; }
+      &:nth-child(3n+2) div.game-cover-icon{ background: #262228; }
+      &:nth-child(3n+3) div.game-cover-icon{ background: #1f2a27; }
+
+      h3{
+        font-size: 1.2rem;
+        margin: 0 0 .4rem;
+      }
+
+      /* Chips de género y año */
+      ul.game-tags{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .35rem;
+
+        li{
+          font-family: var(--font-mono);
+          font-size: .7rem;
+          text-transform: uppercase;
+          letter-spacing: .05em;
+          color: var(--text-color-muted);
+          border: 1px solid var(--border-color);
+          border-radius: 2px;
+          padding: .1rem .4rem;
+        }
+      }
+
+      p.game-dev{
+        margin: .5rem 0 0;
+        font-size: .85rem;
+        color: var(--text-color-muted);
+      }
+
+      /* Al pasar el ratón, el borde de la imagen se ilumina */
+      &:hover :is(img, div.game-cover-icon){
+        border-color: var(--background-color-accent);
       }
     }
-  
-    p.games-note{ color: var(--text-color-muted); font-size: .9rem; }
   }
+
+  p.games-note{
+    margin-top: 2rem;
+    font-size: .9rem;
+    color: var(--text-color-muted);
+  }
+}

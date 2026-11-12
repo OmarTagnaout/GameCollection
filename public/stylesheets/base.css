@@ -5,7 +5,7 @@
 
 body{
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   background: var(--background-color-main);
   color: var(--text-color-light);
   line-height: 1.6;
@@ -17,12 +17,21 @@ body{
   /* Contenido principal: crece para empujar el footer hacia abajo */
   main{
     flex: 1;
-    width: min(1000px, 92%);
+    width: min(1100px, 92%);
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 0 3rem;
   }
 
   a{ color: var(--background-color-accent); }
+
+  /* Titulares: tipografía display, condensada y en mayúsculas */
+  h1, h2, h3, h4{
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    line-height: 1.1;
+    margin: 0 0 .75rem;
+  }
 }
 
 /* Accesibilidad: contorno visible al navegar con teclado */
@@ -44,19 +53,55 @@ a.skip-link{
   &:focus{ left: 0; }
 }
 
-/* Botón principal reutilizable */
+/* Título de sección: línea fina debajo, estilo catálogo */
+.section-title{
+  font-size: 1.5rem;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Etiqueta tipo videoclub: monoespaciada, pequeña y en mayúsculas */
+.label{
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-color-muted);
+  margin: 0 0 .5rem;
+}
+
+/* Botón plano y funcional (sin sombras ni degradados) */
 .btn{
   display: inline-block;
   background: var(--button-color);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: .8rem 1.6rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
+  color: var(--text-on-accent);
+  border: 1px solid var(--button-color);
+  border-radius: var(--radius);
+  padding: .65rem 1.4rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.2s;
 
-  &:hover{ background: var(--button-color-hover); }
+  &:hover{
+    background: var(--button-color-hover);
+    border-color: var(--button-color-hover);
+  }
+}
+
+/* Variante secundaria: solo borde */
+.btn.btn-secondary{
+  background: transparent;
+  color: var(--text-color-light);
+  border-color: var(--border-color);
+
+  &:hover{
+    background: var(--background-color-light);
+    border-color: var(--text-color-muted);
+  }
 }

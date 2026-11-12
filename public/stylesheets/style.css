@@ -1,11 +1,15 @@
-/* CSS principal: solo importa el resto de hojas de estilo.
+/* CSS principal: importa las fuentes y el resto de hojas de estilo.
    Los @import deben ir siempre al principio del archivo. */
-   @import "variables.css";
-   @import "base.css";
-   @import "header.css";
-   @import "hero.css";
-   @import "steps.css";
-   @import "games.css";
-   @import "forms.css";
-   @import "not-found.css";
-   @import "footer.css";
+
+/* Fuentes de Google Fonts: display (titulares), texto y monoespaciada (etiquetas) */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap");
+
+@import "variables.css";
+@import "base.css";
+@import "header.css";
+@import "hero.css";
+@import "steps.css";
+@import "games.css";
+@import "forms.css";
+@import "not-found.css";
+@import "footer.css";

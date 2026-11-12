@@ -1,46 +1,63 @@
-/* CSS Header */
+/* CSS Header: barra superior oscura, estilo tienda */
 header.header{
-    background-color: var(--background-color-dark);
-    color: var(--text-color-light);
-  
-    nav.header-navbar{
+  background-color: var(--background-color-dark);
+  border-bottom: 1px solid var(--border-color);
+
+  nav.header-navbar{
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;   /* en móvil el menú pasa a la línea siguiente */
+    gap: 1.5rem;
+
+    /* Logotipo: solo texto, con una parte en color de acento */
+    a.header-logo{
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-color-light);
+      text-decoration: none;
+      padding: .8rem 0;
+
+      span{ color: var(--background-color-accent); }
+    }
+
+    /* Menú de navegación */
+    ul{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;  /* en móvil el menú pasa a la línea siguiente */
-      padding: 0 1rem;
-  
-      /* Logo / nombre de la web */
-      a.header-logo{
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--text-color-light);
+      flex: 1;
+      gap: .25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      /* El último enlace (Iniciar sesión) se alinea a la derecha, como en Steam */
+      li:last-child{ margin-left: auto; }
+
+      a{
+        display: block;
+        padding: 1.1rem .9rem;
+        color: var(--text-color-muted);
         text-decoration: none;
-        padding: 1rem 0;
-      }
-  
-      /* Menú de navegación */
-      ul{
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-  
-        a{
+        font-size: .95rem;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+
+        &:hover{
           color: var(--text-color-light);
-          text-decoration: none;
-          display: block;
-          padding: 1rem;
-          transition: 0.3s;
-  
-          /* Subrayado al pasar el ratón */
-          &:hover{ border-bottom: solid 2px var(--background-color-accent); }
-          /* Página actual resaltada (atributo aria-current del HTML) */
-          &[aria-current="page"]{ border-bottom: solid 3px var(--background-color-accent); }
+          border-bottom-color: var(--background-color-accent);
+        }
+        /* Página actual (atributo aria-current del HTML) */
+        &[aria-current="page"]{
+          color: var(--text-color-light);
+          border-bottom-color: var(--background-color-accent);
         }
       }
     }
   }
+}

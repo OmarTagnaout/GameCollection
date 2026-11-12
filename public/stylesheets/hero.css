@@ -1,16 +1,59 @@
-/* CSS Hero: portada de la página de inicio */
+/* CSS Hero: presentación + destacado (dos columnas) */
 section.hero{
-    text-align: center;
-    padding: 3rem 1rem;
-  
-    h1{
-      font-size: clamp(1.8rem, 4vw, 2.8rem);  /* tamaño adaptable a la pantalla */
-      margin-bottom: 1rem;
-    }
-  
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem 0 1rem;
+
+  /* Columna de texto */
+  div.hero-text{
+    h1{ font-size: clamp(2.4rem, 6vw, 4.2rem); }
+
     p{
-      max-width: 60ch;
-      margin: 0 auto 1.5rem;
       color: var(--text-color-muted);
+      max-width: 55ch;
+    }
+
+    div.hero-actions{
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.5rem;
     }
   }
+
+  /* Columna del destacado.
+     Sirve igual para un icono (div) que para una portada (img). */
+  figure.hero-cover{
+    margin: 0;
+    max-width: 340px;
+    justify-self: end;
+    width: 100%;
+
+    img, div.hero-cover-icon{
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      background: var(--background-color-surface);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Marcador provisional: icono centrado */
+    div.hero-cover-icon{
+      display: grid;
+      place-items: center;
+      font-size: 6rem;
+    }
+
+    figcaption{ margin: .6rem 0 0; }
+  }
+
+  /* En pantallas pequeñas las columnas se apilan */
+  @media (max-width: 760px){
+    grid-template-columns: 1fr;
+
+    figure.hero-cover{ justify-self: start; }
+  }
+}

@@ -1,37 +1,43 @@
 /* CSS Forms: login y contacto */
 section.form-box{
-    max-width: 480px;
-    margin: 2rem auto;
-    background: var(--background-color-dark);
-    padding: 2rem;
-    border-radius: 12px;
-  
-    /* Cada campo: etiqueta encima y input debajo */
-    div.form-field{
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1.2rem;
-  
-      label{ margin-bottom: .4rem; font-weight: 600; }
-  
-      input, textarea{
-        padding: .75rem;
-        border-radius: 8px;
-        border: 2px solid #3a4070;
-        background: var(--background-color-main);
-        color: var(--text-color-light);
-        font: inherit;
-  
-        &:focus{ border-color: var(--background-color-accent); }
-      }
-    }
-  
-    /* Mensaje de aviso (lo rellena app.js) */
-    p.form-message{
-      min-height: 1.5rem;
+  max-width: 460px;
+  margin: 2rem auto;
+  background: var(--background-color-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+
+  h1{ font-size: 2.2rem; }
+
+  /* Cada campo: etiqueta encima y entrada debajo */
+  div.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+
+    label{
+      margin-bottom: .4rem;
       font-weight: 600;
-  
-      &.ok{ color: #7ee787; }
-      &.error{ color: #ff8b8b; }
+    }
+
+    input, textarea{
+      padding: .7rem;
+      border-radius: 2px;
+      border: 1px solid var(--border-color);
+      background: var(--background-color-main);
+      color: var(--text-color-light);
+      font: inherit;
+
+      &:focus{ border-color: var(--background-color-accent); }
     }
   }
+
+  /* Mensaje de aviso (lo rellena app.js) */
+  p.form-message{
+    min-height: 1.5rem;
+    font-weight: 600;
+
+    &.ok{ color: #7fd48a; }
+    &.error{ color: #ff8b8b; }
+  }
+}

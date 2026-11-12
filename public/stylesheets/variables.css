@@ -1,13 +1,29 @@
-/* CSS Variables: colores globales del proyecto.
-   En caso de que quiera cambiar los colores, solo hay que tocar este archivo. */
+/* CSS Variables: colores y tipografías globales.
+   Para cambiar el aspecto de toda la web, basta con tocar este archivo. */
    :root{
-    --background-color-main: #0f1220;    /* fondo de la página */
-    --background-color-dark: #1a1f36;    /* cabecera, pie y tarjetas */
-    --background-color-light: #2b3160;   /* hover sobre fondos oscuros */
-    --background-color-accent: #9a82ff;  /* color de acento (enlaces, subrayados) */
-    --text-color-light: #f1f3fa;         /* texto principal */
-    --text-color-muted: #b8bed6;         /* texto secundario */
-    --button-color: #6a47f0;             /* botones (contraste suficiente con texto blanco) */
-    --button-color-hover: #5836d6;
-    --focus-color: #ffd166;              /* contorno del foco de teclado */
+    /* Fondos */
+    --background-color-main: #14171c;     /* fondo de la página (negro tinta) */
+    --background-color-dark: #0d0f13;     /* cabecera y pie */
+    --background-color-surface: #1d2128;  /* paneles y formularios */
+    --background-color-light: #272d37;    /* hover sobre superficies */
+    --background-color-accent: #66c0f4;   /* acento (enlaces, subrayados) */
+  
+    /* Textos */
+    --text-color-light: #e8e4dc;          /* blanco cálido */
+    --text-color-muted: #a09b90;          /* gris cálido para texto secundario */
+    --text-on-accent: #0d0f13;            /* texto sobre fondos de acento */
+  
+    /* Botones y bordes */
+    --button-color: #66c0f4;
+    --button-color-hover: #8ad3fa;
+    --border-color: #323944;
+    --radius: 3px;                        /* bordes discretos */
+  
+    /* Accesibilidad */
+    --focus-color: #ffd166;               /* contorno del foco de teclado */
+  
+    /* Tipografías (con alternativas por si no carga Google Fonts) */
+    --font-body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+    --font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+    --font-mono: "IBM Plex Mono", Consolas, monospace;
   }
