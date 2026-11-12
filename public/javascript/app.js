@@ -58,3 +58,23 @@ contact_form?.addEventListener("submit", (event) => {
     // Vaciamos el formulario tras el envío simulado
     contact_form.reset()
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Obtenemos la ruta actual (ej: "/", "/contacto", "/login")
+    const currentPath = window.location.pathname;
+    
+    // Seleccionamos todos los enlaces del menú
+    const navLinks = document.querySelectorAll('.header-navbar ul li a');
+  
+    navLinks.forEach(link => {
+      // Obtenemos la ruta a la que apunta cada enlace
+      const linkPath = new URL(link.href).pathname;
+      
+      // Si la ruta del enlace coincide con la ruta actual, le ponemos el atributo
+      if (currentPath === linkPath) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  });
