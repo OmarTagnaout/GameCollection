@@ -24,22 +24,22 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 
 ## Estructura del proyecto
 gamecollection/
-├── app.js                  Configuración de Express (vistas, middlewares, rutas y errores)
+├── app.js                    Configuración de Express (vistas, middlewares, rutas y errores)
 ├── bin/
-│   └── www                 Arranque del servidor HTTP (puerto y gestión de errores)
+│   └── www                   Arranque del servidor HTTP (puerto y gestión de errores)
 ├── routes/
-│   └── index.js            Rutas de las páginas
-├── views/                  Plantillas EJS
+│   └── index.js              Rutas de las páginas
+├── views/                    Plantillas EJS
 │   ├── index.ejs
 │   ├── login.ejs
 │   ├── contacto.ejs
 │   └── error.ejs
-├── data/                   Reservada para los archivos JSON de la Entrega 2
+├── data/                     Reservada para los archivos JSON de la Entrega 2
 ├── docs/
 │   └── historias-usuario.md
-├── public/                 Archivos estáticos que descarga el navegador
-│   ├── stylesheets/        CSS dividido por componentes
-│   │   ├── style.css       Importa el resto de hojas de estilo
+├── public/                   Archivos estáticos que descarga el navegador
+│   ├── stylesheets/          CSS dividido por componentes
+│   │   ├── style.css         Importa el resto de hojas de estilo
 │   │   ├── variables.css
 │   │   ├── base.css
 │   │   ├── header.css
@@ -50,11 +50,10 @@ gamecollection/
 │   │   ├── not-found.css
 │   │   └── footer.css
 │   ├── javascripts/
-│   │   └── app.js          JavaScript del navegador (simulación de formularios)
+│   │   └── app.js            JavaScript del navegador (simulación de formularios)
 │   └── images/
 ├── package.json
 └── README.md
-
 
 ## Historias de usuario
 - Las historias de usuario están en [`docs/historias-usuario.md`](docs/historias-usuario.md).
