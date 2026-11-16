@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error | GameCollection</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+  <main id="contenido">
+    <section class="not-found">
+      <h1><%= status === 404 ? 'Game over: página no encontrada' : 'Algo ha salido mal' %></h1>
+      <p><%= status === 404 ? 'La página que buscas no existe.' : message %></p>
+      <a class="btn" href="/">Volver al inicio</a>
+    </section>
+  </main>
+
+  <script src="/javascripts/app.js"></script>
+</body>
+</html>
