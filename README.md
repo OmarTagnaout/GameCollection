@@ -23,6 +23,8 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 - `/error` Cualquier otra página
 
 ## Estructura del proyecto
+
+```text
 gamecollection/
 ├── app.js                    Configuración de Express (vistas, middlewares, rutas y errores)
 ├── bin/
@@ -54,6 +56,7 @@ gamecollection/
 │   └── images/
 ├── package.json
 └── README.md
+```
 
 ## Historias de usuario
 - Las historias de usuario están en [`docs/historias-usuario.md`](docs/historias-usuario.md).
