@@ -4,8 +4,8 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 
 
 ## Tecnologías
-- Node.js
-- Express
+- Node.js y Express
+- EJS como motor
 - HTML, CSS y JavaScript
 
 ## Instalación y ejecución
@@ -21,12 +21,47 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 - `/` Inicio
 - `/login` Inicio de sesión 
 - `/contacto` Contacto 
+- `/error` Cualquier otra página
 
 ## Estructura del proyecto
-- `server.js`: servidor y rutas
-- `views/`: páginas HTML
-- `public/`: CSS y JavaScript del cliente
-- `docs/historias-usuario.md`: historias de usuario
+
+gamecollection/
+├── app.js                  Configuración de Express (vistas, middlewares, rutas y errores)
+├── bin/
+│   └── www                 Arranque del servidor HTTP (puerto y gestión de errores)
+├── routes/
+│   └── index.js            Rutas de las páginas
+├── views/                  Plantillas EJS
+│   ├── index.ejs
+│   ├── login.ejs
+│   ├── contacto.ejs
+│   └── error.ejs
+├── data/                   Reservada para los archivos JSON de la Entrega 2
+├── docs/
+│   └── historias-usuario.md
+├── public/                 Archivos estáticos que descarga el navegador
+│   ├── stylesheets/        CSS dividido por componentes
+│   │   ├── style.css       Importa el resto de hojas de estilo
+│   │   ├── variables.css
+│   │   ├── base.css
+│   │   ├── header.css
+│   │   ├── hero.css
+│   │   ├── steps.css
+│   │   ├── games.css
+│   │   ├── forms.css
+│   │   ├── not-found.css
+│   │   └── footer.css
+│   ├── javascripts/
+│   │   └── app.js          JavaScript del navegador (simulación de formularios)
+│   └── images/
+├── package.json
+└── README.md
+
+
+## Historias de usuario
+ 
+Las historias de usuario están en [`docs/historias-usuario.md`](docs/historias-usuario.md).
+
 
 ## Decisiones de diseño (DCU)
 - Navegación idéntica en todas las páginas, con la página actual resaltada
