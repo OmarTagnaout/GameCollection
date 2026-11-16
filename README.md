@@ -2,7 +2,6 @@
 
 Aplicación web para gestionar una colección de videojuegos con soporte para múltiples usuarios.
 
-
 ## Tecnologías
 - Node.js y Express
 - EJS como motor
@@ -24,7 +23,6 @@ Aplicación web para gestionar una colección de videojuegos con soporte para m�
 - `/error` Cualquier otra página
 
 ## Estructura del proyecto
-
 gamecollection/
 ├── app.js                  Configuración de Express (vistas, middlewares, rutas y errores)
 ├── bin/
@@ -59,9 +57,7 @@ gamecollection/
 
 
 ## Historias de usuario
- 
-Las historias de usuario están en [`docs/historias-usuario.md`](docs/historias-usuario.md).
-
+- Las historias de usuario están en [`docs/historias-usuario.md`](docs/historias-usuario.md).
 
 ## Decisiones de diseño (DCU)
 - Navegación idéntica en todas las páginas, con la página actual resaltada
